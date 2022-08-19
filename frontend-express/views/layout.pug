@@ -3,5 +3,23 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/node_modules/bootstrap/dist/css/bootstrap.min.css')
   body
-    block content
+    nav.navbar.fixed-top.navbar-expand-md
+      .container
+        a.navbar-brand(href='/') Loc8r
+        button.navbar-toggler.navbar-toggler-left(type='button', data-toggle='collapse', data-target='#navbarMain')
+          span.navbar-toggler-icon
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/about/') About
+
+    .container.content
+      block content
+
+      footer
+        .row
+          .col-12
+            small &copy; Loc8r
+    //- block content
